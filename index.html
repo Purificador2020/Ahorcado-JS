@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <title>Ahorcado con Carlitox</title>
+ <!-- Bootstrap core CSS -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/estilosAhorcado.css" rel="stylesheet">
+ <link href="image/favicon.ico" rel="icon" type="image/ico"/> 
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ahorcado con Carlitox</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+ <br>
+ <br>
+ <br>
+ <!-- Contenedor -->
+ <div class="container">
+ <center>
+ <h3><strong>Ahorcado! </strong><small>Intenta no perder!</h3>
+ <hr>
+   
+  <!-- Formulario Insertar Palabra -->
+  
+  <div class="form-group row">
+    <label for="palabraObjetivo" class="col-4 col-form-label">Palabra Objetivo</label> 
+    <div class="col-8">
+      <input id="palabraObjetivo" name="palabraObjetivo" placeholder="Ingresa la palabra" type="text" class="form-control">
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary" onclick="iniciarJuego();">Iniciar Juego</button>
+    </div>
+  </div>
+
+  <!-- Formulario Insertar Palabra --> 
+  <br> 
+  <div class="row">  
+  <!-- Columna Izquierda -->
+  <div class="col-sm-4">
+  <br>
+  <img src="image/intentos6.jpg" class="img-fluid rounded" id="vidas" alt="Responsive image">
+  <hr>
+  <!-- Formulario donde ingreso la letra que quiero probar -->
+  <div class="form-inline">  
+  <input type="textr" class="form-control mb-2 mr-sm-2" placeholder="Ingresar Letra" id="letraObjetivo" maxlength="1">  
+  <button class="btn btn-primary mb-2" onclick="obtenerLetra();">¿Tiene mi letra?</button>
+  </div>
+  <!-- Formulario donde ingreso la letra que quiero probar -->
+
+  </div>
+  <!-- Columna Izquierda -->
+  <!-- Columna Derecha -->
+  <div class="col-sm-8">
+  <h5>Intenta no morir ahorcado! te quedan <span id="cantidadVidas">6</span> vidas</h5>
+  <hr>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="palabraCompletar" id="palabraCompletar"> 
+   _ _ _ _ _ _ _ _ _ _ 
+  </div>
+
+  </div>
+  <!-- Columna Derecha -->
+ </center>
+ <br>
+ <br>
+ <!-- Inicia el mensaje donde se informa al ganador del juego -->
+  <div class="alert alert-success" id="mensajeFinal" align="center">
+  <strong>Veo que aun no pudiste averiguar la palabra</strong>
+  </div>
+   <!-- Termina el mensaje donde se informa al ganador del juego -->
+ </div> 
+ <!-- Termina el contenedor -->
+ </body>
+ <!-- Bootstrap core JavaScript -->
+ <script src="js/jquery-3.4.1.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/ahorcado.js"></script>  
+</html>
